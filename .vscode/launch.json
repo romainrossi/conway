@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "gdb",
+      "request": "launch",
+      "name": "Debug",
+      "target": "${workspaceRoot}/conway",
+      "cwd": "${workspaceRoot}",
+      "valuesFormatting": "parseText",
+      "internalConsoleOptions": "openOnSessionStart",
+    "preLaunchTask": "make"
+    }
+  ]
+}
