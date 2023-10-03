@@ -5,7 +5,6 @@
 
 unsigned char count_alive_neighbours(world_t *w, int x, int y)
 {
-    // BUG : don't work on world boundaries
     // The world geometry is a torus with no boundaries
     // while it is not possible to get a cell out of the defined world size,
     // right neigbours of a cell on the rightmost border is column0 and left neighbour on cell in column0 is the rightmost column
@@ -45,7 +44,6 @@ unsigned char count_alive_neighbours(world_t *w, int x, int y)
 
 void world_evolve( world_t *prev, world_t *next)
 {
-    // BUG : don't evolve world boundaries
     if (prev && next && (next->size == prev->size)) {
         for (size_t y=0; y<prev->size; y++) {
             for (size_t x=0; x<prev->size; x++) {

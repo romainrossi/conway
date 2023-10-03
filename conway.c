@@ -17,10 +17,10 @@ int main()
     set_cell(world_a,2,3,1);
     set_cell(world_a,1,3,1);
 
-    for (int n = 0; n < 60; n++)
+    for (int n = 0; n < 1000; n++)
     {
         world_show_ascii(world_a);
-        getchar();
+        usleep(50000);
         world_evolve(world_a, world_b);
         // swap the two worlds for next generation
         w = world_b;
